@@ -10,7 +10,7 @@ Jaeyoo Park, Junha Kim, [Bohyung Han](https://cv.snu.ac.kr/index.php/bhhan/)
 * Download following data [link](https://drive.google.com/file/d/1pWDK4kDQfHdrgAQC0tjrcp76U1dWkovE/view?usp=sharing) and unzip under your $DATA_ROOT_DIR.
 * You can set 'data_root_dir' as an argument in 'options.py'.
 * We extract I3D features from raw UCF-Crime videos.
-* We follow [baseline](https://github.com/WaqasSultani/AnomalyDetectionCVPR2018) to make video features into 32 segment features.
+* We follow [this](https://github.com/WaqasSultani/AnomalyDetectionCVPR2018) to make video features into 32 segment features.
 * GT_anomaly.pkl: Temporal annotations for all videos.
 * exclustion.pkl: We find some of duplicate videos (e.g. same videos but different video name)
 * frames.pkl: Number of frames for all videos
