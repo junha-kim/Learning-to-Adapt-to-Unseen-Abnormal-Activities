@@ -38,7 +38,7 @@ For details, please check the downloaded data.
 3. meta-test
   * Scratch: python main.py --mode eval --dataset $DATASET_NAME --seed $CLASS_NUM
   * Pretrain: python main.py --mode eval --dataset $DATASET_NAME --seed $CLASS_NUM --chpt $NAME_OF_CHECKPOINT_BY_PRETRAIN
-  * Meta-train: python main.py --mode eval --dataset $DATASET_NAME --seed $CLASS_NUM --chpt $NAME_OF_CHECKPOINT_BY_METATRAIN
+  * Meta-train: python main.py --mode eval --dataset $DATASET_NAME --seed $CLASS_NUM --chpt $NAME_OF_CHECKPOINT_BY_METATRAIN --sampling
     * For meta-test, chpt format is like '{}epochs_exp0_seed1_lr1e-5_split1.pkl'.
     
 ## Reference
