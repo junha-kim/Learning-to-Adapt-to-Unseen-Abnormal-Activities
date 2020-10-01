@@ -15,17 +15,17 @@ Jaeyoo Park, Junha Kim, [Bohyung Han](https://cv.snu.ac.kr/index.php/bhhan/)
 * frames.pkl: Number of frames for all videos
 
 
-You need to follow directory structure of dataset as below.  
+You need to follow directory structure of dataset as below.
 ```  
-{DATA_ROOT_DIR}
-|-- {DATASET NAME #1}
-|   |-- pkl_files (temporal gt, frame numbers, excluded video lists(optional))
+{$DATA_ROOT_DIR}
+|-- {$DATASET NAME}
+|   |-- pkl_files
 |   |-- {all_rgbs}  
-|   |   |-- {class names}  
-|   |   |-- |-- feature files (.npy)  
+|   |   |-- {$CLASS_NAME}  
+|   |   |-- |-- video feature files (.npy)  
 |   |-- {all_flows}  
 |   |   |-- same structures as {all_rgbs}  
-|   |-- {splits(for UCF-Crime)}  
+|   |-- {splits(only for UCF-Crime)}  
 ```  
 For details, please check the downloaded data.
 
