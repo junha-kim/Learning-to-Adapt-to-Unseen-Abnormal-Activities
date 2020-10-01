@@ -1,0 +1,52 @@
+Learning to Adapt to Unseen Abnormal Activities under Weak Supervision
+=====
+
+This repo is official PyTorch implementation of Learning to Adapt to Unseen Abnormal Activities under Weak Supervision (ACCV 2020).
+
+Jaeyoo Park, Junha Kim, [Bohyung Han](https://cv.snu.ac.kr/index.php/bhhan/)
+
+## Data
+
+* Download following data [link](https://drive.google.com/file/d/1pWDK4kDQfHdrgAQC0tjrcp76U1dWkovE/view?usp=sharing)
+* We extract I3D features from raw UCF-Crime videos.
+* We follow [baseline](https://github.com/WaqasSultani/AnomalyDetectionCVPR2018) to make video features into 32 segment features.
+* GT_anomaly.pkl: Temporal annotations for all videos.
+* exclustion.pkl: We find some of duplicate videos (e.g. same videos but different video name)
+* frames.pkl: Number of frames for all videos
+
+
+You need to follow directory structure of dataset as below.  
+```  
+{DATA_ROOT_DIR}
+|-- {DATASET NAME #1}
+|   |-- pkl_files (temporal gt, frame numbers, excluded video lists(optional))
+|   |-- {all_rgbs}  
+|   |   |-- {class names}  
+|   |   |-- |-- feature files (.npy)  
+|   |-- {all_flows}  
+|   |   |-- same structures as {all_rgbs}  
+|   |-- {splits(for UCF-Crime)}  
+```  
+For details, please check the downloaded data.
+
+## Run
+* 'seed' is used for selecting target class (e.g. 1 for Abuse) of UCF-Crime dataset
+* All arguments are in options.py.
+* Simple running command is as follows.
+1. pretrain: python main.py --mode pretrain --dataset $DATASET_NAME --seed $CLASS_NUM --save_chpt
+2. meta-train: python main.py --mode meta_train --dataset $DATASET_NAME --seed $CLASS_NUM --save_chpt
+3. meta-test
+  * Scratch: python main.py --mode eval --dataset $DATASET_NAME --seed $CLASS_NUM
+  * Pretrain: python main.py --mode eval --dataset $DATASET_NAME --seed $CLASS_NUM --chpt $NAME_OF_CHECKPOINT_BY_PRETRAIN
+  * Meta-train: python main.py --mode eval --dataset $DATASET_NAME --seed $CLASS_NUM --chpt $NAME_OF_CHECKPOINT_BY_METATRAIN
+    * For meta-test, chpt format is like '{}epochs_exp0_seed1_lr1e-5_split1.pkl'.
+    
+## Reference
+```  
+@InProceedings{Park_2020_ACCV_Learn-To-Adapt-Unseen,  
+author = {Park, Jaeyoo and Kim, Junha, and Han, Bohyoung},  
+title = {Learning to Adapt to Unseen Abnormal Activities under Weak Supervision},  
+booktitle = {Asian Conference on Computer Vision (ACCV)},  
+year = {2020}  
+}  
+```
