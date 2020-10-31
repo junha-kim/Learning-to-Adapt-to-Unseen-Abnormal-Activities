@@ -7,7 +7,7 @@ Jaeyoo Park, Junha Kim, [Bohyung Han](https://cv.snu.ac.kr/index.php/bhhan/)
 
 ## Data
 
-* Download following data [link](https://drive.google.com/file/d/1HlOD5eVLXIa_sAz3IqS8w5b4z2SeKrsP/view?usp=sharing) and unzip under your $DATA_ROOT_DIR.
+* Download following data [link](https://drive.google.com/file/d/18nlV4YjPM93o-SdnPQrvauMN_v-oizmZ/view?usp=sharing) and unzip under your $DATA_ROOT_DIR.
 * You can set 'data_root_dir' as an argument in 'options.py'.
 * We extract I3D features from raw UCF-Crime videos.
 * We follow [this](https://github.com/WaqasSultani/AnomalyDetectionCVPR2018) to make video features into 32 segment features.
