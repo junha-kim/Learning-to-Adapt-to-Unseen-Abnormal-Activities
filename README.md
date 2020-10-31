@@ -26,7 +26,7 @@ You need to follow directory structure of dataset as below.
 |   |   |-- |-- video feature files (.npy)  
 |   |-- {all_flows}  
 |   |   |-- same structures as {all_rgbs}  
-|   |-- {splits(only for UCF-Crime)}  
+|   |-- {splits}  
 ```  
 For details, please check the downloaded data.
 
