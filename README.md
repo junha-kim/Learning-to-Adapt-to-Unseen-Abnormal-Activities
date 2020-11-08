@@ -44,7 +44,7 @@ For details, please check the downloaded data.
     
 ## Reference
 ```  
-@InProceedings{,  
+@InProceedings{park2020learning,  
 author = {Park, Jaeyoo, Kim, Junha, and Han, Bohyoung},  
 title = {Learning to Adapt to Unseen Abnormal Activities under Weak Supervision},  
 booktitle = {Asian Conference on Computer Vision (ACCV)},  
